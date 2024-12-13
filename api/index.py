@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='api/htmls')
 
 @app.route('/')
 def home():
-    print(os.listdir("api/htmls/"))
-    return render_template("api/htmls/"+os.listdir("api/htmls/")[0])
+    
+    return render_template("index.html")
 
 @app.route('/about')
 def about():
