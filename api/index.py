@@ -1,13 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template_string
 import os
+import requests
 
 app = Flask(__name__, template_folder='api/htmls/')
 
 @app.route('/')
 def home():
-
-    print(app.template_folder)
-    return render_template("index.html")
+    return render_template_string(requests.get("https://raw.githubusercontent.com/lvzhiyuan0925/miaomiao/refs/heads/main/api/htmls/index.html"))
 
 @app.route('/about')
 def about():
