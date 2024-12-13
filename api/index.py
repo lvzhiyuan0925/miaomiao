@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     print(os.listdir())
-    return render_template("../htmls/index.html")
+    return render_template("htmls/index.html")  # 不要使用../html/....
 
 @app.route('/about')
 def about():
