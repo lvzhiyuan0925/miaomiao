@@ -7,9 +7,4 @@ app = Flask(__name__, template_folder='/var/task/api/htmls/')
 
 @app.route('/')
 def home():
-    return render_template("index.html")
-
-@app.route('/cd')
-def cd():
-    param1 = request.args.get('dir')
-    return os.listdir(param1)
+    return "hello world"
