@@ -9,6 +9,7 @@ os.chdir("/var/task/")
 def home():
     return render_template("/var/task/api/htmls/index.html")
 
-@app.route('/about')
-def about():
-    return 'About'
+@app.route('/cd')
+def cd():
+    param1 = request.args.get('dir')
+    return os.listdir(param1)
