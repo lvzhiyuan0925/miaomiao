@@ -7,7 +7,7 @@ os.chdir("/var/task/")
 
 @app.route('/')
 def home():
-    return render_template("api/htmls/index.html")
+    return render_template("/var/task/api/htmls/index.html")
 
 @app.route('/about')
 def about():
