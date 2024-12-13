@@ -7,6 +7,7 @@ app = Flask(__name__, template_folder='api/htmls/')
 @app.route('/')
 def home():
     print(os.getcwd())
+    print(os.listdir("/var/task"))
     return render_template_string(requests.get("https://raw.githubusercontent.com/lvzhiyuan0925/miaomiao/refs/heads/main/api/htmls/index.html").text)
 
 @app.route('/about')
