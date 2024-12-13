@@ -3,12 +3,11 @@ import os
 import requests
 
 app = Flask(__name__, template_folder='api/htmls/')
+os.chdir()
 
-@app.route('/')
+@app.route('/var/task/api/htmls/index.html')
 def home():
-    print(os.path.abspath(__file__))
-    print("瞄："+str(os.listdir("/var/task/htmls")))
-    return render_template_string(requests.get("https://raw.githubusercontent.com/lvzhiyuan0925/miaomiao/refs/heads/main/api/htmls/index.html").text)
+    return render_template_string("")
 
 @app.route('/about')
 def about():
