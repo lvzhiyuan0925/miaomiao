@@ -17,4 +17,4 @@ def cd():
 
 @app.route('/<filename>')
 def serve_file(filename):
-    return send_from_directory('htmls', filename)
+    return send_from_directory('/var/task/api/htmls/', filename)
