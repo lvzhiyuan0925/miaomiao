@@ -15,6 +15,6 @@ def cd():
     param1 = request.args.get('dir')
     return os.listdir(param1)
 
-@app.route('/<filename>')
+@app.route('/htmls/<filename>')
 def serve_file(filename):
     return send_from_directory('/var/task/api/htmls/', filename)
